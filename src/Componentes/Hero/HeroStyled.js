@@ -11,6 +11,7 @@ export const HeroSection = styled.section`
 
   @media (max-width: 720px) {
     margin: 10px;
+    
   }
 
   img {

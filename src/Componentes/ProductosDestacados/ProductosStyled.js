@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../UI/Button/Button";
 
 export const SectionProductos = styled.section`
   background-color: var(--color-2);
@@ -31,18 +32,11 @@ export const CardProducto = styled.div`
     height: 300px;
     border-radius: 1rem;
   }
-
-  button {
-    width: 200px;
-    border-radius: 10px;
-    padding: 10px;
-    border: none;
-    margin: 20px 0;
-    background-color: var(--color-4);
-    color: var(--color-2);
-    position: absolute;
-    top: 230px;
-    font-weight: bold;
-  }
 `;
 
+export const ButtonCard = styled(Button)`
+  width: 200px;
+  margin: 20px 0;
+  position: absolute;
+  top: 230px;
+`;

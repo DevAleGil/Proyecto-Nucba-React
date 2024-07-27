@@ -4,7 +4,7 @@ export const CardProducto = ({ titulo, img }) => {
   return (
     <s.CardProducto>
       <img src={`/imgs/${img}`} alt="" />
-      <button>{titulo}</button>
+      <s.ButtonCard>{titulo}</s.ButtonCard>
     </s.CardProducto>
   );
 };

@@ -35,7 +35,7 @@ export const HeaderPrincipal = styled.div`
   justify-content: space-around;
   align-items: center;
   gap: 550px;
-  background-color: red;
+  background-color: var(--color-1);
   padding: 0.5rem;
 
   div {
@@ -43,12 +43,19 @@ export const HeaderPrincipal = styled.div`
     gap: 20px;
     justify-content: center;
   }
-  .menu {
-    display: none;
-  }
+
   @media (max-width: 720px) {
     gap: 150px;
-    .menu {
+  }
+`;
+
+export const IconMobile = styled.div`
+  font-size: 32px;
+
+  svg {
+    color: var(--color-2);
+    display: none;
+    @media (max-width: 720px) {
       display: block;
     }
   }
@@ -57,9 +64,7 @@ export const HeaderPrincipal = styled.div`
 export const HeaderNavbar = styled.nav`
   width: 100%;
   max-width: 1100px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
+  background-color: var(--color-2);  
   border-bottom: 2px solid var(--color-4);
   border-top: 2px solid var(--color-4);
   margin-top: 1rem;
@@ -69,7 +74,12 @@ export const HeaderNavbar = styled.nav`
     max-width: 700px;
   }
   @media (max-width: 720px) {
-    display: none;
+    margin-top: 0;
+    border: none;
+    background-color: var(--color-3);
+    display: ${({ openMenu }) => (openMenu ? "flex" : "none")};
+    height: 100vh;
+    
   }
 
   ul {
@@ -81,15 +91,24 @@ export const HeaderNavbar = styled.nav`
     @media (max-width: 1100px) {
       gap: 50px;
     }
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+    }
   }
 
   li {
     color: var(--color-3);
     font-size: 1rem;
     font-weight: bold;
+
+    @media (max-width: 720px) {
+      color: var(--color-2);
+    }
   }
   li:hover {
     color: var(--color-4);
     text-decoration: underline;
+    cursor: pointer;
   }
 `;

@@ -5,15 +5,16 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import { TituloFooter } from "./TituloFooter";
 
 export const Footer = () => {
   return (
     <s.SectionFooter>
       <s.FooterPricipal>
         <s.FooterContactos>
-          <h3>Contactos</h3>
+          <TituloFooter titulo="Contactos" />
           <li>
-            <HiOutlinePhone size="20px" /> 221-4276565{" "}
+            <HiOutlinePhone size="20px" /> 221-4276565
           </li>
           <hr />
           <li>
@@ -42,15 +43,15 @@ export const Footer = () => {
           </li>
         </s.FooterContactos>
         <s.FooterInfo>
-          <h3>Horarios</h3>
+          <TituloFooter titulo="Horarios" />
           <p>Lunes a Viernes de 9 a 17hs</p>
           <p>Sábados de 9 a 13hs</p>
-          <h3>Dirección</h3>
+          <TituloFooter titulo="Dirección" />
           <p>Diagonal 73 N 1627</p>
           <p>Buenos Aires, La Plata</p>
         </s.FooterInfo>
         <s.FooterData>
-          <h3>Información</h3>
+          <TituloFooter titulo="Información" />
           <ul>
             <a href="#">
               <li>Preguntas Frecuentes</li>

@@ -10,9 +10,9 @@ export const Hero = () => {
           En Óptica Tokio Visión nos dedicamos a proporcionarte soluciones
           ópticas que van más allá de la corrección visual: cada visita es una
           oportunidad para descubrir la perfecta combinación de tecnología y
-          estilo personalizado. Nuestro equipo de profesionales está comprometido en brindarte
-          un servicio personalizado, asegurando que encuentres la
-          combinación perfecta de funcionalidad y moda.
+          estilo personalizado. Nuestro equipo de profesionales está
+          comprometido en brindarte un servicio personalizado, asegurando que
+          encuentres la combinación perfecta de funcionalidad y moda.
         </p>
       </s.HeroBox>
 

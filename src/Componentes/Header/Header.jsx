@@ -1,7 +1,16 @@
 import * as s from "./HeaderStyled";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
+import { Navbar } from "./Navbar";
+import { useContext } from "react";
+import { Contexto } from "../../MiContexto/Contexto";
+
+
 export const Header = () => {
+  
+  const {openMenu, handleOpenMenu} = useContext(Contexto)
+  
+
   return (
     <s.HeaderContainer>
       <s.HeaderParrafo>
@@ -13,30 +22,20 @@ export const Header = () => {
 
       <s.HeaderPrincipal>
         <img src={`/imgs/Logo.jpg`} alt="" />
+        
+        <div onClick={handleOpenMenu}>
+          <s.IconMobile>
+            <IoMenu />
+          </s.IconMobile>
 
-        <div>
-          <IoMenu size="32px" className="menu" />
           <a href="#">
             <FaCartShopping size="32px" />
           </a>
         </div>
       </s.HeaderPrincipal>
 
-      <s.HeaderNavbar>
-        <ul>
-          <a href="">
-            <li>Inicio</li>
-          </a>
-          <a href="">
-            <li>Productos</li>
-          </a>
-          <a href="">
-            <li>Productos Destacados</li>
-          </a>
-          <a href="">
-            <li>Contacto</li>
-          </a>
-        </ul>
+      <s.HeaderNavbar openMenu={openMenu}>
+        <Navbar />
       </s.HeaderNavbar>
     </s.HeaderContainer>
   );

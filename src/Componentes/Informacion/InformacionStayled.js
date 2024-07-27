@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../UI/Button/Button";
 
 export const InformacionContainer = styled.section`
   background-image: url("imgs/img-info.avif");
@@ -33,7 +34,7 @@ export const InformacionContainer = styled.section`
       font-size: 1rem;
     }
     @media (max-width: 540px) {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     @media (max-width: 400px) {
       font-size: 0.7rem;
@@ -45,25 +46,14 @@ export const InformacionContainer = styled.section`
     color: var(--color-2);
     position: relative;
     font-weight: bold;
+    text-align: center;
     @media (max-width: 720px) {
-      font-size: 0.9rem;
-    }
-    @media (max-width: 540px) {
-      font-size: 0.7rem;
-    }
-    @media (max-width: 400px) {
-      font-size: 0.5rem;
+      font-size: 0.8rem;
     }
   }
+`;
 
-  button {
-    margin-top: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color:var(--color-4);
-    color: var(--color-2);
-    font-weight: bold;
-    position: relative;
-  }
+export const ButtonInformacion = styled(Button)`
+  margin-top: 50px;
+  position: relative;
 `;
