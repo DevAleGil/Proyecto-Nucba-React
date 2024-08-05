@@ -8,6 +8,11 @@ const Container = styled.div`
   gap: 2rem;
   margin-top: 50px;
 
+  @media (max-width: 960px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   div {
     border-bottom: 2px solid var(--color-4);
     border-top: 2px solid var(--color-4);
@@ -16,6 +21,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    width: 300px;
   }
 `;
 
