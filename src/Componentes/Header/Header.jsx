@@ -5,11 +5,8 @@ import { Navbar } from "./Navbar";
 import { useContext } from "react";
 import { Contexto } from "../../MiContexto/Contexto";
 
-
 export const Header = () => {
-  
-  const {openMenu, handleOpenMenu} = useContext(Contexto)
-  
+  const { openMenu, handleOpenMenu } = useContext(Contexto);
 
   return (
     <s.HeaderContainer>
@@ -23,9 +20,9 @@ export const Header = () => {
       <s.HeaderPrincipal>
         <img src={`/imgs/Logo.jpg`} alt="" />
         
-        <div onClick={handleOpenMenu}>
+        <div>
           <s.IconMobile>
-            <IoMenu />
+            <IoMenu onClick={handleOpenMenu} />
           </s.IconMobile>
 
           <a href="#">

@@ -1,8 +1,8 @@
-import * as s from "./ProductosStyled.js";
+import * as s from "./ProductosDestacadosStyled.js";
 import { ProductosData } from "../../data/DataProductos.js";
 import { CardProducto } from "./CardProducto.jsx";
 
-export const Productos = () => {
+export const ProductosDestacados = () => {
   return (
     <>
       <s.SectionProductos>

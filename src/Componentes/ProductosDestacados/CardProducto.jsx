@@ -1,6 +1,6 @@
-import * as s from "./ProductosStyled";
+import * as s from "./ProductosDestacadosStyled"
 
-export const CardProducto = ({ titulo, img }) => {
+export const CardProducto = ({ titulo, img}) => {
   return (
     <s.CardProducto>
       <img src={`/imgs/${img}`} alt="" />

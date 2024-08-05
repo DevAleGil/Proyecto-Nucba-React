@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -64,7 +65,7 @@ export const IconMobile = styled.div`
 export const HeaderNavbar = styled.nav`
   width: 100%;
   max-width: 1100px;
-  background-color: var(--color-2);  
+  background-color: var(--color-2);
   border-bottom: 2px solid var(--color-4);
   border-top: 2px solid var(--color-4);
   margin-top: 1rem;
@@ -78,8 +79,7 @@ export const HeaderNavbar = styled.nav`
     border: none;
     background-color: var(--color-3);
     display: ${({ openMenu }) => (openMenu ? "flex" : "none")};
-    height: 100vh;
-    
+    height: 70vh;
   }
 
   ul {
@@ -95,20 +95,25 @@ export const HeaderNavbar = styled.nav`
     @media (max-width: 720px) {
       flex-direction: column;
     }
-  }
+    
 
-  li {
-    color: var(--color-3);
-    font-size: 1rem;
-    font-weight: bold;
 
-    @media (max-width: 720px) {
-      color: var(--color-2);
-    }
   }
-  li:hover {
+`;
+
+export const NavLinkStyled = styled(NavLink)`
+  color: var(--color-3);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
     color: var(--color-4);
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  @media (max-width: 720px) {
+    color: var(--color-2);
   }
 `;

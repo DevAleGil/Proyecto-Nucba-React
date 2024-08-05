@@ -55,6 +55,9 @@ export const HeroBox = styled.div`
     text-align: justify;
     font-size: 1.2rem;
     margin-top: 30px;
+    
+    
+
     @media (max-width: 1000px) {
       width: 400px;
       font-size: 1rem;

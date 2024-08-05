@@ -6,10 +6,12 @@ export const ContextoProvaider = ({ children }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => {
-    setOpenMenu(!open);
+    setOpenMenu(!openMenu);
   };
 
   return (
-    <Contexto.Provider value={(openMenu, handleOpenMenu)}>{children}</Contexto.Provider>
+    <Contexto.Provider value={{ openMenu, handleOpenMenu }}>
+      {children}
+    </Contexto.Provider>
   );
 };

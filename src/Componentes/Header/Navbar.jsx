@@ -1,39 +1,35 @@
+import { NavLinkStyled } from "./HeaderStyled";
+
 export const Navbar = () => {
   const links = [
     {
       id: 1,
       title: "Inicio",
-      href: "#",
+      path: "/",
     },
     {
       id: 2,
       title: "Sobre Nosotros",
-      href: "#",
+      path: "/about",
     },
     {
       id: 3,
       title: "Productos",
-      href: "#",
+      path: "/productos",
     },
     {
       id: 4,
-      title: "Productos Destacados",
-      href: "#",
-    },
-    {
-      id: 5,
       title: "Contacto",
-      href: "#",
+      path: "/contacto",
     },
   ];
 
   return (
     <ul>
       {links.map((link) => (
-        <li key={link.id}>
-          <a href={link.href}></a>
+        <NavLinkStyled key={link.id} to={link.path}>
           {link.title}
-        </li>
+        </NavLinkStyled>
       ))}
     </ul>
   );
